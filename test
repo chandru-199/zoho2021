@@ -1,0 +1,27 @@
+
+#include <iostream>
+using namespace std;
+
+void print(string s)
+{   
+    int mid = s.length()/2;
+    int size = s.length();
+    string res;
+    for (int i = 0; i < size; i++) {
+       res += s[(i + mid) % size];
+       for (int j = 0; j < size-(res.length()/2); j++) {
+           cout << " ";
+       }
+       cout << res << "\n";
+    }
+   //Your code here
+}
+
+int main()
+{   string s;
+    cout<<"enter string"<<endl;
+    cin>>s;
+    print(s);
+}
+
+
