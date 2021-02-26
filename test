@@ -1,4 +1,3 @@
-
 #include <iostream>
 using namespace std;
 
@@ -9,7 +8,7 @@ void print(string s)
     string res;
     for (int i = 0; i < size; i++) {
        res += s[(i + mid) % size];
-       for (int j = 0; j < size-(res.length()/2); j++) {
+       for (int j = 0; j < size-res.length(); j++) {
            cout << " ";
        }
        cout << res << "\n";
@@ -23,5 +22,3 @@ int main()
     cin>>s;
     print(s);
 }
-
-
